@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
         gameObject.transform.position = transform.forward * moveSpeed * Time.deltaTime;
     }
 
-    
+
     public void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Enemy")
@@ -26,7 +26,10 @@ public class Projectile : MonoBehaviour
             collider.gameObject.GetComponent<BasicEnemy>().Kill();
             Destroy(gameObject);
         }
-        else
+        else if (collider.tag == "Geometry")
+        {
+            Debug.Log("Projectile has hit another object, destroying projectile.");
             Destroy(gameObject);
+        }
     }
 }
