@@ -104,7 +104,7 @@ Rigidbody:
   m_GameObject: {fileID: 3708544562788555374}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -216,11 +216,11 @@ MonoBehaviour:
   fireRate: 4
   shotgunForce: 500
   blunderFireRate: 4
-  modernFireRate: 1
-  smgFireRate: 0.4
-  blunderForce: 650
-  modernForce: 400
-  smgForce: 100
+  modernFireRate: 0.8
+  smgFireRate: 0.2
+  blunderForce: 1000
+  modernForce: 250
+  smgForce: 10
   playerBody: {fileID: 3708544562788555363}
   blunderbussGun: {fileID: 3708544563673603828}
   modernGun: {fileID: 7042504707934792133}
@@ -228,7 +228,7 @@ MonoBehaviour:
   projectile: {fileID: 688255369938882186, guid: 137843f3c6c54244a98c4c7daf5b02e2,
     type: 3}
   weaponHardPoint: {fileID: 2964194317462263955}
-  projectileSpeed: 100
+  projectileSpeed: 70
   isBlunder: 0
   isModern: 0
   isSMG: 0
@@ -554,11 +554,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blunderbuss
-      objectReference: {fileID: 0}
-    - target: {fileID: 7648629789141949302, guid: 25d2cf16bf711d9469f434954fbdb23d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
