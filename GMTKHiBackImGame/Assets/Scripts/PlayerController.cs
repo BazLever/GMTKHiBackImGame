@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     public float shotgunForce;
     float fireTime;
 
+    float blunderFireTime;
+    float rifleFireTime;
+    float smgFireTime;
+
+
     public float blunderFireRate;
     public float modernFireRate;
     public float smgFireRate;
@@ -41,11 +46,29 @@ public class PlayerController : MonoBehaviour
     private GameObject shotTimer;
     private GameObject shotBackground;
 
+    private GameObject blunderShotTimer;
+    private GameObject blunderBackground;
+
+    private GameObject rifleShotTimer;
+    private GameObject rifleBackground;
+
+    private GameObject smgShotTimer;
+    private GameObject smgBackground;
+
     void Start()
     {
 
         shotTimer = GameObject.Find("TimeLeft");
         shotBackground = GameObject.Find("Background");
+
+        blunderShotTimer = GameObject.Find("BTimeLeft");
+        blunderBackground = GameObject.Find("BBackground");
+
+        rifleShotTimer = GameObject.Find("RTimeLeft");
+        rifleBackground = GameObject.Find("RBackground");
+
+        smgShotTimer = GameObject.Find("STimeLeft");
+        smgBackground = GameObject.Find("SBackground");
 
         isBlunder = true;
         isModern = false;
@@ -56,13 +79,20 @@ public class PlayerController : MonoBehaviour
     {
 
         fireTime += Time.deltaTime;
-        if (fireTime >= fireRate)
-        {
-            shoot();
-            fireTime = 0;
-        }
 
-        
+        blunderFireTime += Time.deltaTime;
+        rifleFireTime += Time.deltaTime;
+        smgFireTime += Time.deltaTime;
+
+        /*
+                fireTime += Time.deltaTime;
+                if (fireTime >= fireRate)
+                {
+                    shoot();
+                    fireTime = 0;
+                }
+                */
+
 
 
 
@@ -106,26 +136,74 @@ public class PlayerController : MonoBehaviour
         //Weapons
         if (isBlunder == true)
         {
-            fireRate = blunderFireRate;
+            //fireRate = blunderFireRate;
             shotgunForce = blunderForce;
+
+            if (blunderFireTime >= blunderFireRate)
+            {
+                shoot();
+                blunderFireTime = 0;
+            }
+        } else if (!isBlunder)
+        {
+            if (blunderFireTime >= blunderFireRate)
+            {
+                blunderFireTime = blunderFireRate;
+            }
         }
 
         if (isModern == true)
         {
-            fireRate = modernFireRate;
+            //fireRate = modernFireRate;
             shotgunForce = modernForce;
+
+            if (rifleFireTime >= modernFireRate)
+            {
+                shoot();
+                rifleFireTime = 0;
+            }
+        } else if (!isModern)
+        {
+            if (rifleFireTime >= modernFireRate)
+            {
+                rifleFireTime = modernFireRate;
+            }
         }
 
         if (isSMG == true)
         {
-            fireRate = smgFireRate;
+            //fireRate = smgFireRate;
             shotgunForce = smgForce;
+
+            if (smgFireTime >= smgFireRate)
+            {
+                shoot();
+                smgFireTime = 0;
+            }
+        }
+        else if (!isSMG)
+        {
+            if (smgFireTime >= smgFireRate)
+            {
+                smgFireTime = smgFireRate;
+            }
         }
 
 
+            blunderShotTimer.GetComponent<RectTransform>().localScale = new Vector3(blunderFireTime, 0.14f, 0);
+        blunderBackground.GetComponent<RectTransform>().localScale = new Vector3(blunderFireRate, 0.14f, 0);
+
+        rifleShotTimer.GetComponent<RectTransform>().localScale = new Vector3(rifleFireTime, 0.14f, 0);
+        rifleBackground.GetComponent<RectTransform>().localScale = new Vector3(modernFireRate, 0.14f, 0);
+
+        smgShotTimer.GetComponent<RectTransform>().localScale = new Vector3(smgFireTime, 0.14f, 0);
+        smgBackground.GetComponent<RectTransform>().localScale = new Vector3(smgFireRate, 0.14f, 0);
+
+
+        /*
         shotTimer.GetComponent<RectTransform>().localScale = new Vector3(fireTime, 0.14f, 0);
         shotBackground.GetComponent<RectTransform>().localScale = new Vector3(fireRate, 0.14f, 0);
-
+        */
     }
 
 
