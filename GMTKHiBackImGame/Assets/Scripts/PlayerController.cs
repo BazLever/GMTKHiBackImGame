@@ -190,14 +190,14 @@ public class PlayerController : MonoBehaviour
         }
 
 
-            blunderShotTimer.GetComponent<RectTransform>().localScale = new Vector3(blunderFireTime, 0.14f, 0);
-        blunderBackground.GetComponent<RectTransform>().localScale = new Vector3(blunderFireRate, 0.14f, 0);
+            blunderShotTimer.GetComponent<RectTransform>().localScale = new Vector3(blunderFireTime, 0.24f, 0);
+        blunderBackground.GetComponent<RectTransform>().localScale = new Vector3(blunderFireRate, 0.24f, 0);
 
-        rifleShotTimer.GetComponent<RectTransform>().localScale = new Vector3(rifleFireTime, 0.14f, 0);
-        rifleBackground.GetComponent<RectTransform>().localScale = new Vector3(modernFireRate, 0.14f, 0);
+        rifleShotTimer.GetComponent<RectTransform>().localScale = new Vector3(rifleFireTime, 0.24f, 0);
+        rifleBackground.GetComponent<RectTransform>().localScale = new Vector3(modernFireRate, 0.24f, 0);
 
-        smgShotTimer.GetComponent<RectTransform>().localScale = new Vector3(smgFireTime, 0.14f, 0);
-        smgBackground.GetComponent<RectTransform>().localScale = new Vector3(smgFireRate, 0.14f, 0);
+        smgShotTimer.GetComponent<RectTransform>().localScale = new Vector3(smgFireTime, 0.24f, 0);
+        smgBackground.GetComponent<RectTransform>().localScale = new Vector3(smgFireRate, 0.24f, 0);
 
 
         /*
