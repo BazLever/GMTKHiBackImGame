@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,9 +31,15 @@ public class PlayerController : MonoBehaviour
     //Hardpoint for the projectile spawn point
     public Transform weaponHardPoint;
 
+    public int projectileSpeed;
+
     public bool isBlunder;
     public bool isModern;
     public bool isSMG;
+
+    //UI Elements
+    public GameObject shotTimer;
+    public GameObject shotBackground;
 
     void Start()
     {
@@ -50,6 +58,8 @@ public class PlayerController : MonoBehaviour
             fireTime -= fireRate;
         }
 
+        shotTimer.GetComponent<RectTransform>().localScale = new Vector3(fireTime, 0.14f, 0);
+        shotBackground.GetComponent<RectTransform>().localScale = new Vector3(fireRate, 0.14f, 0);
 
 
 
@@ -119,7 +129,8 @@ public class PlayerController : MonoBehaviour
         float soundRange;
         soundRange = Random.Range(0.8f, 1);
 
-        Instantiate(projectile, weaponHardPoint);
+        GameObject GO = Instantiate(projectile, weaponHardPoint.position, Quaternion.identity) as GameObject;
+        GO.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * projectileSpeed, ForceMode.Impulse);
 
         if (!isSMG)
         {

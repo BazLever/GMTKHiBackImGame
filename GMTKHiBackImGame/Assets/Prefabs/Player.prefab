@@ -228,9 +228,12 @@ MonoBehaviour:
   projectile: {fileID: 688255369938882186, guid: 137843f3c6c54244a98c4c7daf5b02e2,
     type: 3}
   weaponHardPoint: {fileID: 2964194317462263955}
+  projectileSpeed: 100
   isBlunder: 0
   isModern: 0
   isSMG: 0
+  shotTimer: {fileID: 0}
+  shotBackground: {fileID: 0}
 --- !u!114 &3708544563056013720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,7 +398,7 @@ PrefabInstance:
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.612
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
@@ -405,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.87
+      value: 1.273
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
@@ -567,7 +570,7 @@ PrefabInstance:
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.612
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
@@ -577,7 +580,7 @@ PrefabInstance:
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.87
+      value: 1.273
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}

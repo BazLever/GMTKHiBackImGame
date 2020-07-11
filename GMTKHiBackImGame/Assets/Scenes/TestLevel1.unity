@@ -3078,6 +3078,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &891610234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7138050636342207811, guid: 0bba54125a360a0439538f033326a906,
+    type: 3}
+  m_PrefabInstance: {fileID: 534104185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1254752692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,6 +3393,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254752692}
   m_Mesh: {fileID: 1847437156}
+--- !u!1 &1367015607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5269201841562163243, guid: 0bba54125a360a0439538f033326a906,
+    type: 3}
+  m_PrefabInstance: {fileID: 534104185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1371338579
 Mesh:
   m_ObjectHideFlags: 0
@@ -4274,6 +4286,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708544563056013735, guid: 9e7decd4a584be848ade621b69713bd8,
+        type: 3}
+      propertyPath: shotTimer
+      value: 
+      objectReference: {fileID: 891610234}
+    - target: {fileID: 3708544563056013735, guid: 9e7decd4a584be848ade621b69713bd8,
+        type: 3}
+      propertyPath: shotBackground
+      value: 
+      objectReference: {fileID: 1367015607}
+    - target: {fileID: 3708544563056013735, guid: 9e7decd4a584be848ade621b69713bd8,
+        type: 3}
+      propertyPath: projectileSpeed
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7decd4a584be848ade621b69713bd8, type: 3}
