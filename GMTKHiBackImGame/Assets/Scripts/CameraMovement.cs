@@ -12,21 +12,16 @@ public class CameraMovement : MonoBehaviour
 
     public bool headCheck;
 
+    public GameObject cameraObject;
+
+
 
     
     void Update()
     {
-
+        /*
         mouseXValue = Input.GetAxis("Mouse X");
         mouseYValue = Input.GetAxis("Mouse Y");
-
-        /*
-        if (transform.rotation.eulerAngles.x >= 85)
-        {
-            Debug.Log("Player is looking below 85 degrees");
-            transform.rotation = Quaternion.Euler(85, 0, 0);
-        }
-        */
 
         if (mouseXValue != 0 && headCheck == false)
         {
@@ -37,6 +32,23 @@ public class CameraMovement : MonoBehaviour
         {
             transform.Rotate(Vector3.right * -mouseYValue * cameraSensitivity * Time.deltaTime);
         }
+
+        
+
+        if (cameraObject.transform.rotation.eulerAngles.x >= 85)
+        {
+            Debug.Log("Player is looking below 85 degrees");
+            transform.rotation = Quaternion.Euler(85, cameraObject.transform.rotation.eulerAngles.y, cameraObject.transform.rotation.eulerAngles.z);
+        }
+
+        if (cameraObject.transform.rotation.eulerAngles.x <= -85)
+        {
+            Debug.Log("Player is looking below 85 degrees");
+            transform.rotation = Quaternion.Euler(-85, cameraObject.transform.rotation.eulerAngles.y, cameraObject.transform.rotation.eulerAngles.z);
+        }
+        */
+
+
 
     }
 }

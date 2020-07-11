@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSensitivity: 100
   headCheck: 0
+  cameraObject: {fileID: 0}
 --- !u!1 &3708544563056013731
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,10 +230,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 2
   shotgunForce: 500
-  blunderFireRate: 2
+  blunderFireRate: 3
   modernFireRate: 1.2
   smgFireRate: 0.2
-  blunderForce: 500
+  blunderForce: 750
   modernForce: 300
   smgForce: 150
   playerBody: {fileID: 3708544562788555363}
@@ -256,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSensitivity: 100
   headCheck: 1
+  cameraObject: {fileID: 3708544563056013731}
 --- !u!82 &3708544563056013721
 AudioSource:
   m_ObjectHideFlags: 0
