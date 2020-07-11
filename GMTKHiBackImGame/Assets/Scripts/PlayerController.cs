@@ -38,11 +38,15 @@ public class PlayerController : MonoBehaviour
     public bool isSMG;
 
     //UI Elements
-    public GameObject shotTimer;
-    public GameObject shotBackground;
+    private GameObject shotTimer;
+    private GameObject shotBackground;
 
     void Start()
     {
+
+        shotTimer = GameObject.Find("TimeLeft");
+        shotBackground = GameObject.Find("Background");
+
         isBlunder = true;
         isModern = false;
     }
@@ -58,8 +62,7 @@ public class PlayerController : MonoBehaviour
             fireTime -= fireRate;
         }
 
-        shotTimer.GetComponent<RectTransform>().localScale = new Vector3(fireTime, 0.14f, 0);
-        shotBackground.GetComponent<RectTransform>().localScale = new Vector3(fireRate, 0.14f, 0);
+        
 
 
 
@@ -119,6 +122,9 @@ public class PlayerController : MonoBehaviour
             shotgunForce = smgForce;
         }
 
+
+        shotTimer.GetComponent<RectTransform>().localScale = new Vector3(fireTime, 0.14f, 0);
+        shotBackground.GetComponent<RectTransform>().localScale = new Vector3(fireRate, 0.14f, 0);
 
     }
 
