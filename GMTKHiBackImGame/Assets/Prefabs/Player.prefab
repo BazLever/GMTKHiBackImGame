@@ -162,6 +162,7 @@ Transform:
   - {fileID: 3708544563673603829}
   - {fileID: 7590004827654073012}
   - {fileID: 1119165279524762575}
+  - {fileID: 2964194317462263955}
   m_Father: {fileID: 3708544562788555362}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -228,18 +229,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6833f0e7c6241494397f93564364c708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 2
+  fireRate: 4
   shotgunForce: 500
-  blunderFireRate: 3
-  modernFireRate: 1.2
-  smgFireRate: 0.2
-  blunderForce: 750
-  modernForce: 300
-  smgForce: 150
+  blunderFireRate: 4
+  modernFireRate: 1
+  smgFireRate: 0.4
+  blunderForce: 650
+  modernForce: 400
+  smgForce: 100
   playerBody: {fileID: 3708544562788555363}
   blunderbussGun: {fileID: 3708544563673603828}
   modernGun: {fileID: 7590004827654073013}
   subMGun: {fileID: 1119165279524762574}
+  projectile: {fileID: 0}
+  weaponHardPoint: {fileID: 0}
   isBlunder: 0
   isModern: 0
   isSMG: 0
@@ -354,6 +357,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &4247329273216355990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2964194317462263955}
+  m_Layer: 0
+  m_Name: ProjectileHardPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2964194317462263955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247329273216355990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3708544563056013734}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &247831474531004867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -457,15 +490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blunderbuss
       objectReference: {fileID: 0}
-    - target: {fileID: 7648629789141949302, guid: 25d2cf16bf711d9469f434954fbdb23d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.612
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
@@ -475,7 +503,7 @@ PrefabInstance:
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.87
+      value: 1.273
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}

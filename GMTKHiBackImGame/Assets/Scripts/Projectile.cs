@@ -1,0 +1,32 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Projectile : MonoBehaviour
+{
+    public float moveSpeed;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        gameObject.transform.position = transform.forward * moveSpeed * Time.deltaTime;
+    }
+
+    
+    public void OnCollisionEnter(Collider collider)
+    {
+        if (collider.tag == "Enemy")
+        {
+            collider.gameObject.GetComponent<BasicEnemy>().Kill();
+            Destroy(gameObject);
+        }
+        else
+            Destroy(gameObject);
+    }
+}

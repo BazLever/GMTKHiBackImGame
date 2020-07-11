@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
     public GameObject modernGun;
     public GameObject subMGun;
 
+    //Gameobject for the projectile fired by the guns
+    public GameObject projectile;
+
+    //Hardpoint for the projectile spawn point
+    public Transform weaponHardPoint;
+
     public bool isBlunder;
     public bool isModern;
     public bool isSMG;
@@ -113,6 +119,7 @@ public class PlayerController : MonoBehaviour
         float soundRange;
         soundRange = Random.Range(0.8f, 1);
 
+        Instantiate(projectile, weaponHardPoint);
 
         if (!isSMG)
         {
