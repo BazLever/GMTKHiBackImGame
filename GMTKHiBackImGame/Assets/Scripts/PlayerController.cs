@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public int shotgunForce;
     float fireTime;
     bool hasFired;
-
+    public Rigidbody playerBody;
 
 
     void Start()
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
      void shoot()
     {
-        gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * -shotgunForce);
+        playerBody.velocity = new Vector3(0,0,0);
+        playerBody.AddForce(transform.forward * -shotgunForce);
     }
 }
