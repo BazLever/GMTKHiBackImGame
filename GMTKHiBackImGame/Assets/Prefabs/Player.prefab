@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3708544562788555360}
   - component: {fileID: 3708544562788555375}
   - component: {fileID: 3708544562788555363}
-  - component: {fileID: 3708544562788555364}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -112,21 +111,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3708544562788555364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3708544562788555374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02a9e3b0a9180f749bab2d9e8fffaadb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraSensitivity: 100
-  headCheck: 0
-  cameraObject: {fileID: 0}
 --- !u!1 &3708544563056013731
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,8 +225,9 @@ MonoBehaviour:
   blunderbussGun: {fileID: 3708544563673603828}
   modernGun: {fileID: 7590004827654073013}
   subMGun: {fileID: 1119165279524762574}
-  projectile: {fileID: 0}
-  weaponHardPoint: {fileID: 0}
+  projectile: {fileID: 688255369938882186, guid: 137843f3c6c54244a98c4c7daf5b02e2,
+    type: 3}
+  weaponHardPoint: {fileID: 2964194317462263955}
   isBlunder: 0
   isModern: 0
   isSMG: 0
@@ -259,8 +244,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSensitivity: 100
-  headCheck: 1
-  cameraObject: {fileID: 3708544563056013731}
 --- !u!82 &3708544563056013721
 AudioSource:
   m_ObjectHideFlags: 0
