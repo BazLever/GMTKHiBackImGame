@@ -20,6 +20,14 @@ public class CameraMovement : MonoBehaviour
         mouseXValue = Input.GetAxis("Mouse X");
         mouseYValue = Input.GetAxis("Mouse Y");
 
+        /*
+        if (transform.rotation.eulerAngles.x >= 85)
+        {
+            Debug.Log("Player is looking below 85 degrees");
+            transform.rotation = Quaternion.Euler(85, 0, 0);
+        }
+        */
+
         if (mouseXValue != 0 && headCheck == false)
         {
             transform.Rotate(Vector3.up * mouseXValue * cameraSensitivity * Time.deltaTime);
