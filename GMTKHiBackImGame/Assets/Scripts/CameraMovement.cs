@@ -8,17 +8,32 @@ public class CameraMovement : MonoBehaviour
     float mouseXValue;
     float mouseYValue;
 
+    private GameObject player;
+
     public float cameraSensitivity;
 
-    public bool headCheck;
+    //public bool headCheck;
 
-    public GameObject cameraObject;
+    //public GameObject cameraObject;
 
 
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
 
-    
     void Update()
     {
+        mouseYValue = Mathf.Min(85, Mathf.Max(-85, mouseYValue + Input.GetAxis("Mouse Y")));
+        mouseXValue += Input.GetAxis("Mouse X");
+
+        player.transform.localRotation = Quaternion.Euler(0, mouseXValue, 0);
+        transform.localRotation = Quaternion.Euler(-mouseYValue, 0, 0);
+
+
+
+
+
         /*
         mouseXValue = Input.GetAxis("Mouse X");
         mouseYValue = Input.GetAxis("Mouse Y");
