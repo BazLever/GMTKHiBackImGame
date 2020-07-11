@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         if (fireTime >= fireRate)
         {
             shoot();
-            fireTime -= fireRate;
+            fireTime = 0;
         }
 
         

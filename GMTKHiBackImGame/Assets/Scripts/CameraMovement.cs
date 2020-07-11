@@ -12,13 +12,18 @@ public class CameraMovement : MonoBehaviour
 
     public float cameraSensitivity;
 
-    //public bool headCheck;
+    bool quickTurning;
 
-    //public GameObject cameraObject;
+
+
+
+
+    float value;
 
 
     private void Start()
     {
+        quickTurning = false;
         player = GameObject.Find("Player");
     }
 
@@ -31,6 +36,17 @@ public class CameraMovement : MonoBehaviour
         transform.localRotation = Quaternion.Euler(-mouseYValue, 0, 0);
 
 
+
+        if (Input.GetMouseButtonDown(1) && quickTurning == false)
+        {
+            quickTurning = true;
+            //transform.Rotate (Vector3.up + new Vector3(0,180,0));
+        }
+
+        if (quickTurning)
+        {
+            quickTurn();
+        }
 
 
 
@@ -66,4 +82,20 @@ public class CameraMovement : MonoBehaviour
 
 
     }
+
+
+    void quickTurn()
+    {
+        
+        value += 100 * Time.deltaTime;
+        if (value < 180)
+        {
+            mouseXValue += value;
+        } else if (value > 180)
+        {
+            quickTurning = false;
+        }
+        
+    }
+
 }
