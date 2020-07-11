@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
         
         
 
-        playerBody.AddForce(transform.forward * -shotgunForce);
+        playerBody.AddForce(transform.forward * (-shotgunForce));
 
         gameObject.GetComponent<AudioSource>().pitch = soundRange;
         gameObject.GetComponent<AudioSource>().Play();

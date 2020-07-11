@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Physics.gravity = new Vector3(0, -6.0f, 0);
     }
 
     

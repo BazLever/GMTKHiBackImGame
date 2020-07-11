@@ -7,6 +7,7 @@ public class CameraMovement : MonoBehaviour
 
     float mouseXValue;
     float mouseYValue;
+    float mouseZValue;
 
     private GameObject player;
 
@@ -15,7 +16,7 @@ public class CameraMovement : MonoBehaviour
     bool quickTurning;
 
 
-
+    int turns = 9;
 
 
     float value;
@@ -25,6 +26,7 @@ public class CameraMovement : MonoBehaviour
     {
         quickTurning = false;
         player = GameObject.Find("Player");
+
     }
 
     void Update()
@@ -40,7 +42,7 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && quickTurning == false)
         {
             quickTurning = true;
-            //transform.Rotate (Vector3.up + new Vector3(0,180,0));
+            Debug.Log("Turning!");
         }
 
         if (quickTurning)
@@ -86,7 +88,18 @@ public class CameraMovement : MonoBehaviour
 
     void quickTurn()
     {
+        if (turns != 0)
+        {
+            turns -= 1;
+            mouseXValue += 20;
+        } else if (turns == 0)
+        {
+            quickTurning = false;
+            turns = 9;
+            Debug.Log("Finished Turning!");
+        }
         
+        /*
         value += 100 * Time.deltaTime;
         if (value < 180)
         {
@@ -95,7 +108,7 @@ public class CameraMovement : MonoBehaviour
         {
             quickTurning = false;
         }
-        
+        */
     }
 
 }
