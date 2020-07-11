@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int fireRate;
+    public float fireRate;
     public int shotgunForce;
     float fireTime;
     bool hasFired;
@@ -35,7 +35,13 @@ public class PlayerController : MonoBehaviour
 
      void shoot()
     {
+        float soundRange;
+        soundRange = Random.Range(0.8f, 1);
+
         playerBody.velocity = new Vector3(0,0,0);
         playerBody.AddForce(transform.forward * -shotgunForce);
+
+        gameObject.GetComponent<AudioSource>().pitch = soundRange;
+        gameObject.GetComponent<AudioSource>().Play();
     }
 }
