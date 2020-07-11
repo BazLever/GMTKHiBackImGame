@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour
     }
 
     
-    public void OnCollisionEnter(Collider collider)
+    public void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Enemy")
         {

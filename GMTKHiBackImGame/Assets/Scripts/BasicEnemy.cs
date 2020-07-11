@@ -17,7 +17,7 @@ public class BasicEnemy : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter(Collider collider)
+    public void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Player")
         {
