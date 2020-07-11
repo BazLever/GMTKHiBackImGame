@@ -23,12 +23,20 @@ public class PlayerController : MonoBehaviour
     public float modernForce;
     public float smgForce;
 
+
+    float flashTimer = 0.05f;
+    float flashDelta;
+
     public Rigidbody playerBody;
 
 
     public GameObject blunderbussGun;
     public GameObject modernGun;
     public GameObject subMGun;
+
+    public GameObject blunderFlash;
+    public GameObject rifleFlash;
+    public GameObject smgFlash;
 
     //sound elements
     public AudioSource blunderbusSound;
@@ -83,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        flashDelta += Time.deltaTime;
         fireTime += Time.deltaTime;
 
         blunderFireTime += Time.deltaTime;
@@ -228,14 +236,33 @@ public class PlayerController : MonoBehaviour
         shotTimer.GetComponent<RectTransform>().localScale = new Vector3(fireTime, 0.14f, 0);
         shotBackground.GetComponent<RectTransform>().localScale = new Vector3(fireRate, 0.14f, 0);
         */
+
+
+        
+
+        if (flashDelta >= flashTimer)
+        {
+            blunderFlash.SetActive(false);
+            rifleFlash.SetActive(false);
+            smgFlash.SetActive(false);
+            flashDelta = 0;
+        }
+
     }
 
 
 
      void shoot()
     {
+        blunderFlash.SetActive(true);
+        rifleFlash.SetActive(true);
+        smgFlash.SetActive(true);
+
         float soundRange;
         soundRange = Random.Range(0.9f, 1.1f);
+
+        float randomRotation;
+        randomRotation = Random.Range(0.0f, 180.0f);
 
         GameObject GO = Instantiate(projectile, weaponHardPoint.position, Quaternion.identity) as GameObject;
         GO.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * projectileSpeed, ForceMode.Impulse);
@@ -262,6 +289,16 @@ public class PlayerController : MonoBehaviour
             smgSound.pitch = soundRange;
             smgSound.Play();
         }
+
+
+        blunderFlash.transform.localRotation = Quaternion.Euler(randomRotation, 0, 0);
+        rifleFlash.transform.localRotation = Quaternion.Euler(randomRotation, 0, 0);
+        smgFlash.transform.localRotation = Quaternion.Euler(randomRotation, 0, 0);
+
+        flashDelta = 0;
+
         
+
     }
+
 }
