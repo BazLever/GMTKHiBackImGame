@@ -30,6 +30,12 @@ public class PlayerController : MonoBehaviour
     public GameObject modernGun;
     public GameObject subMGun;
 
+    //sound elements
+    public AudioSource blunderbusSound;
+    public AudioSource rifleSound;
+    public AudioSource smgSound;
+
+
     //Gameobject for the projectile fired by the guns
     public GameObject projectile;
 
@@ -211,7 +217,7 @@ public class PlayerController : MonoBehaviour
      void shoot()
     {
         float soundRange;
-        soundRange = Random.Range(0.8f, 1);
+        soundRange = Random.Range(0.9f, 1.1f);
 
         GameObject GO = Instantiate(projectile, weaponHardPoint.position, Quaternion.identity) as GameObject;
         GO.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * projectileSpeed, ForceMode.Impulse);
@@ -225,7 +231,19 @@ public class PlayerController : MonoBehaviour
 
         playerBody.AddForce(transform.forward * (-shotgunForce));
 
-        gameObject.GetComponent<AudioSource>().pitch = soundRange;
-        gameObject.GetComponent<AudioSource>().Play();
+        if (isBlunder)
+        {
+            blunderbusSound.pitch = soundRange;
+            blunderbusSound.Play();
+        } else if (isModern)
+        {
+            rifleSound.pitch = soundRange;
+            rifleSound.Play();
+        } else if (isSMG)
+        {
+            smgSound.pitch = soundRange;
+            smgSound.Play();
+        }
+        
     }
 }
