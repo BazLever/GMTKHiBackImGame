@@ -5,15 +5,32 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float fireRate;
-    public int shotgunForce;
+    public float shotgunForce;
     float fireTime;
-    bool hasFired;
+
+    public float blunderFireRate;
+    public float modernFireRate;
+    public float smgFireRate;
+
+    public float blunderForce;
+    public float modernForce;
+    public float smgForce;
+
     public Rigidbody playerBody;
 
 
+    public GameObject blunderbussGun;
+    public GameObject modernGun;
+    public GameObject subMGun;
+
+    public bool isBlunder;
+    public bool isModern;
+    public bool isSMG;
+
     void Start()
     {
-        hasFired = false;
+        isBlunder = true;
+        isModern = false;
     }
 
 
@@ -29,6 +46,64 @@ public class PlayerController : MonoBehaviour
 
 
 
+
+        //Weapon Swap 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            isBlunder = true;
+            isModern = false;
+            isSMG = false;
+
+            blunderbussGun.SetActive(true);
+            modernGun.SetActive(false);
+            subMGun.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            isBlunder = false;
+            isModern = true;
+            isSMG = false;
+
+            blunderbussGun.SetActive(false);
+            modernGun.SetActive(true);
+            subMGun.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            isBlunder = false;
+            isModern = false;
+            isSMG = true;
+
+            blunderbussGun.SetActive(false);
+            modernGun.SetActive(false);
+            subMGun.SetActive(true);
+        }
+
+
+
+
+
+
+        //Weapons
+        if (isBlunder == true)
+        {
+            fireRate = blunderFireRate;
+            shotgunForce = blunderForce;
+        }
+
+        if (isModern == true)
+        {
+            fireRate = modernFireRate;
+            shotgunForce = modernForce;
+        }
+
+        if (isSMG == true)
+        {
+            fireRate = smgFireRate;
+            shotgunForce = smgForce;
+        }
+
+
     }
 
 
@@ -38,7 +113,14 @@ public class PlayerController : MonoBehaviour
         float soundRange;
         soundRange = Random.Range(0.8f, 1);
 
-        playerBody.velocity = new Vector3(0,0,0);
+
+        if (!isSMG)
+        {
+            playerBody.velocity = new Vector3(0, 0, 0);
+        }
+        
+        
+
         playerBody.AddForce(transform.forward * -shotgunForce);
 
         gameObject.GetComponent<AudioSource>().pitch = soundRange;

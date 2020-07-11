@@ -196,7 +196,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28620
+  m_Name: pb_Mesh29296
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -548,6 +548,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708544563056013735, guid: 9e7decd4a584be848ade621b69713bd8,
+        type: 3}
+      propertyPath: blunderForce
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708544563056013735, guid: 9e7decd4a584be848ade621b69713bd8,
+        type: 3}
+      propertyPath: modernForce
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708544563056013735, guid: 9e7decd4a584be848ade621b69713bd8,
+        type: 3}
+      propertyPath: blunderFireRate
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7decd4a584be848ade621b69713bd8, type: 3}
