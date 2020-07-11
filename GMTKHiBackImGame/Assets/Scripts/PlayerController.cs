@@ -144,11 +144,17 @@ public class PlayerController : MonoBehaviour
         {
             //fireRate = blunderFireRate;
             shotgunForce = blunderForce;
-
-            if (blunderFireTime >= blunderFireRate)
+            if (Input.GetMouseButton(0))
             {
-                shoot();
-                blunderFireTime = 0;
+                if (blunderFireTime >= blunderFireRate)
+                {
+                    shoot();
+                    blunderFireTime = 0;
+                } 
+            }
+            else if (blunderFireTime >= blunderFireRate)
+            {
+                blunderFireTime = blunderFireRate;
             }
         } else if (!isBlunder)
         {
@@ -162,11 +168,17 @@ public class PlayerController : MonoBehaviour
         {
             //fireRate = modernFireRate;
             shotgunForce = modernForce;
-
-            if (rifleFireTime >= modernFireRate)
+            if (Input.GetMouseButton(0))
             {
-                shoot();
-                rifleFireTime = 0;
+                if (rifleFireTime >= modernFireRate)
+                {
+                    shoot();
+                    rifleFireTime = 0;
+                } 
+            }
+            else if (rifleFireTime >= modernFireRate)
+            {
+                rifleFireTime = modernFireRate;
             }
         } else if (!isModern)
         {
@@ -180,11 +192,17 @@ public class PlayerController : MonoBehaviour
         {
             //fireRate = smgFireRate;
             shotgunForce = smgForce;
-
-            if (smgFireTime >= smgFireRate)
+            if (Input.GetMouseButton(0))
             {
-                shoot();
-                smgFireTime = 0;
+                if (smgFireTime >= smgFireRate)
+                {
+                    shoot();
+                    smgFireTime = 0;
+                }
+            }
+            else if (smgFireTime >= smgFireRate)
+            {
+                smgFireTime = smgFireRate;
             }
         }
         else if (!isSMG)
