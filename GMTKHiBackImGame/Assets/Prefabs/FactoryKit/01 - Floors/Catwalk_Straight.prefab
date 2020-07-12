@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6040824905267961610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535758323204238139}
+  - component: {fileID: 7506346074811549607}
+  m_Layer: 0
+  m_Name: CatwalkBase_Straight_2x2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1535758323204238139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040824905267961610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4794705154548447106}
+  - {fileID: 2764202065016030110}
+  - {fileID: 6632221770296901331}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7506346074811549607
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040824905267961610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &572100234176470168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1535758323204238139}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc503fee6bac9604589c27f701bc2b79, type: 2}
+    - target: {fileID: -927199367670048503, guid: bec379c7d268ef04c9634bc8ff2b783d,
+        type: 3}
+      propertyPath: m_Name
+      value: CatwalkBase_Straight_2x2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bec379c7d268ef04c9634bc8ff2b783d, type: 3}
+--- !u!4 &4794705154548447106 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bec379c7d268ef04c9634bc8ff2b783d,
+    type: 3}
+  m_PrefabInstance: {fileID: 572100234176470168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1833722105731113417
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1535758323204238139}
+    m_Modifications:
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000031292436
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -179.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067841657714980723, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_Name
+      value: CatwalkRailing_Straight (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 452ac61ca827e624db59b55a44b97599, type: 3}
+--- !u!4 &6632221770296901331 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+    type: 3}
+  m_PrefabInstance: {fileID: 1833722105731113417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7144038475172699268
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1535758323204238139}
+    m_Modifications:
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067841657714980723, guid: 452ac61ca827e624db59b55a44b97599,
+        type: 3}
+      propertyPath: m_Name
+      value: CatwalkRailing_Straight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 452ac61ca827e624db59b55a44b97599, type: 3}
+--- !u!4 &2764202065016030110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5005981907067526938, guid: 452ac61ca827e624db59b55a44b97599,
+    type: 3}
+  m_PrefabInstance: {fileID: 7144038475172699268}
+  m_PrefabAsset: {fileID: 0}
