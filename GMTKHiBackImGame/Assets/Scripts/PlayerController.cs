@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
     //Death related
     public GameObject deathCam;
+    public GameObject playersBody;
 
 
     //Animation related
@@ -358,6 +359,11 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.GetComponent<CameraMovement>().enabled = false;
         Camera.main.transform.gameObject.GetComponent<Camera>().enabled = false;
         GameObject GO = Instantiate(deathCam, weaponHardPoint.position, Quaternion.identity) as GameObject;
+        playerBody.transform.gameObject.GetComponent<CapsuleCollider>().height = 1;
+        playersBody.transform.Translate(0, 1, 0);
+        playersBody.transform.localRotation = Quaternion.Euler(-90, 0, 0);
+
+        Destroy(gameObject);
     }
 
 }

@@ -426,15 +426,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056777562597898644}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.078, y: 0.038, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.63018024, w: 0.7764489}
+  m_LocalPosition: {x: -0.235, y: 0.192, z: -0.084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5477006531768413705}
   - {fileID: 3384710689949520809}
   m_Father: {fileID: 1248677198622241670}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 78.12701}
 --- !u!1 &1072131687852878940
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039244799471029262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: -0.368}
+  m_LocalPosition: {x: 0, y: -1, z: -0.597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 105901573429947440}
@@ -1118,6 +1118,7 @@ MonoBehaviour:
   isSMG: 0
   deathCam: {fileID: 3386869960139644607, guid: fd1e879bc03aad845b339bec32faf158,
     type: 3}
+  playersBody: {fileID: 2039244799471029262}
   blunderAnim: {fileID: 5752790603162893634}
   rifleAnim: {fileID: 4231262225473388357}
   smgAnim: {fileID: 2131684247296232901}
@@ -1431,15 +1432,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5498791034000158340}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.297, y: -0.05, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.572487, w: 0.8199138}
+  m_LocalPosition: {x: 0.142, y: 0.013, z: -0.086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5661625652233917992}
   - {fileID: 2339490105679542700}
   m_Father: {fileID: 1248677198622241670}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.848}
 --- !u!1 &5840343263716440018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1248677198622241670
 Transform:
   m_ObjectHideFlags: 0
@@ -2328,7 +2329,7 @@ PrefabInstance:
     - target: {fileID: 7648629789141949302, guid: ffc3a97dda144064991203484adc42d7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: ffc3a97dda144064991203484adc42d7,
         type: 3}
@@ -2513,7 +2514,7 @@ PrefabInstance:
     - target: {fileID: 7648629789141949302, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7648629789141949303, guid: 25d2cf16bf711d9469f434954fbdb23d,
         type: 3}
