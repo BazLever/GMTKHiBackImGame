@@ -13487,6 +13487,11 @@ PrefabInstance:
       propertyPath: robotsRemaining
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5473120441066523785, guid: 88bbd047c935d8846bf34f00751f60ee,
+        type: 3}
+      propertyPath: nextScene
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9152632533286252003, guid: 88bbd047c935d8846bf34f00751f60ee,
         type: 3}
       propertyPath: m_Name

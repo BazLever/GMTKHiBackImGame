@@ -7,6 +7,7 @@ public class LevelEnd : MonoBehaviour
 {
 
     public int robotsRemaining;
+    public int nextScene;
 
     //Material stored to swap to when all the enemies are defeated
     public Material levelEndActive;
@@ -31,8 +32,9 @@ public class LevelEnd : MonoBehaviour
     {
         if (robotsRemaining == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            SceneManager.LoadScene(0);
+            int nextBuildIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            SceneManager.LoadScene(nextBuildIndex);
+            SceneManager.LoadScene(nextScene);
         }
         else
         {

@@ -358,6 +358,9 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
+        GameObject change = GameObject.Find("DeadText");
+        change.GetComponent<Text>().enabled = true;
+
         isDead = true;
         gameObject.transform.GetComponent<CameraMovement>().enabled = false;
         Camera.main.transform.gameObject.GetComponent<Camera>().enabled = false;
