@@ -5,17 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class BasicEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject scream;
 
     public void OnTriggerEnter(Collider collider)
     {
@@ -27,6 +18,7 @@ public class BasicEnemy : MonoBehaviour
 
     public void Kill()
     {
+        GameObject GO = Instantiate(scream, gameObject.transform.position, Quaternion.identity) as GameObject;
         GameObject levelEnd;
         levelEnd = GameObject.Find("LevelEnd");
         levelEnd.GetComponent<LevelEnd>().robotsRemaining -= 1;
