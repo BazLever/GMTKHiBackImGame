@@ -107,3 +107,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robotsRemaining: 0
+  levelEndActive: {fileID: 2100000, guid: e547836c3bfa47a4ab4bb05e73317fbc, type: 2}
