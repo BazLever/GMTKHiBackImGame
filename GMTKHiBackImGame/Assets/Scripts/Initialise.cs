@@ -10,6 +10,6 @@ public class Initialise : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         gameObject.GetComponent<AudioSource>().Stop();
         gameObject.GetComponent<AudioSource>().Play();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
