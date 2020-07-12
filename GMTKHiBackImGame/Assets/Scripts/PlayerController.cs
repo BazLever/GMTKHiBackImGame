@@ -77,7 +77,9 @@ public class PlayerController : MonoBehaviour
 
 
     //Animation related
-    public Animation blunderbusAnimation, rifleAnimation, smgAnimation;
+    public Animator blunderAnim;
+    public Animator rifleAnim;
+    public Animator smgAnim;
 
     void Start()
     {
@@ -96,10 +98,6 @@ public class PlayerController : MonoBehaviour
 
         isBlunder = true;
         isModern = false;
-
-        blunderbusAnimation.Play("IdleBlunderbus");
-        rifleAnimation.Play("IdleRifle");
-        smgAnimation.Play("IdleSMG");
     }
 
 
@@ -128,10 +126,7 @@ public class PlayerController : MonoBehaviour
         //Weapon Swap 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-                blunderbusAnimation.Play("ShootingBlunderbus");
-                blunderbusAnimation.Play("IdleBlunderbus");
-                blunderbusAnimation["IdleBlunderbus"].time = 0.0f;
-                
+
                 isBlunder = true;
             isModern = false;
             isSMG = false;
@@ -139,12 +134,15 @@ public class PlayerController : MonoBehaviour
             blunderbussGun.SetActive(true);
             modernGun.SetActive(false);
             subMGun.SetActive(false);
-        }
+
+                blunderAnim.SetBool("IsShooting", false);
+                rifleAnim.SetBool("IsShooting", false);
+                smgAnim.SetBool("IsShooting", false);
+
+            }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-                blunderbusAnimation.Play("ShootingBlunderbus");
-                rifleAnimation.Play("IdleRifle");
-                rifleAnimation["IdleRifle"].time = 0.0f;
+                
                 
                 isBlunder = false;
             isModern = true;
@@ -153,12 +151,14 @@ public class PlayerController : MonoBehaviour
             blunderbussGun.SetActive(false);
             modernGun.SetActive(true);
             subMGun.SetActive(false);
-        }
+
+                blunderAnim.SetBool("IsShooting", false);
+                rifleAnim.SetBool("IsShooting", false);
+                smgAnim.SetBool("IsShooting", false);
+            }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-                blunderbusAnimation.Play("ShootingBlunderbus");
-                smgAnimation.Play("IdleSMG");
-                smgAnimation["IdleSMG"].time = 0.0f;
+                
 
                 isBlunder = false;
             isModern = false;
@@ -167,7 +167,12 @@ public class PlayerController : MonoBehaviour
             blunderbussGun.SetActive(false);
             modernGun.SetActive(false);
             subMGun.SetActive(true);
-        }
+
+                blunderAnim.SetBool("IsShooting", false);
+                rifleAnim.SetBool("IsShooting", false);
+                smgAnim.SetBool("IsShooting", false);
+
+            }
 
 
 
@@ -177,7 +182,6 @@ public class PlayerController : MonoBehaviour
         //Weapons
         if (isBlunder == true)
         {
-                blunderbusAnimation.enabled = true;
                 //fireRate = blunderFireRate;
                 shotgunForce = blunderForce;
             if (Input.GetMouseButton(0))
@@ -190,12 +194,13 @@ public class PlayerController : MonoBehaviour
             }
             else if (blunderFireTime >= blunderFireRate)
             {
-                    blunderbusAnimation.Play("IdleBlunderbus");
                     blunderFireTime = blunderFireRate;
-            }
+                    blunderAnim.SetBool("IsShooting", false);
+                    rifleAnim.SetBool("IsShooting", false);
+                    smgAnim.SetBool("IsShooting", false);
+                }
         } else if (!isBlunder)
         {
-                blunderbusAnimation.enabled = false;
             if (blunderFireTime >= blunderFireRate)
             {
                 blunderFireTime = blunderFireRate;
@@ -204,7 +209,6 @@ public class PlayerController : MonoBehaviour
 
         if (isModern == true)
         {
-                rifleAnimation.enabled = true;
             //fireRate = modernFireRate;
             shotgunForce = modernForce;
             if (Input.GetMouseButton(0))
@@ -216,10 +220,12 @@ public class PlayerController : MonoBehaviour
                 } 
             }
             else if (rifleFireTime >= modernFireRate)
-            {
-                    rifleAnimation.Play("IdleRifle");
+                { 
                     rifleFireTime = modernFireRate;
-            }
+                    blunderAnim.SetBool("IsShooting", false);
+                    rifleAnim.SetBool("IsShooting", false);
+                    smgAnim.SetBool("IsShooting", false);
+                }
         } else if (!isModern)
         {
                 
@@ -244,9 +250,11 @@ public class PlayerController : MonoBehaviour
             }
             else if (smgFireTime >= smgFireRate)
             {
-                    smgAnimation.Play("IdleSMG");
                     smgFireTime = smgFireRate;
-            }
+                    blunderAnim.SetBool("IsShooting", false);
+                    rifleAnim.SetBool("IsShooting", false);
+                    smgAnim.SetBool("IsShooting", false);
+                }
         }
         else if (!isSMG)
         {
@@ -291,10 +299,9 @@ public class PlayerController : MonoBehaviour
 
      void shoot()
     {
-        blunderbusAnimation.Play("ShootingBlunderbus");
-        rifleAnimation.Play("ShootingRifle");
-        smgAnimation.Play("ShootingSMG");
-
+        blunderAnim.SetBool("IsShooting", true);
+        rifleAnim.SetBool("IsShooting", true);
+        smgAnim.SetBool("IsShooting", true);
         blunderFlash.SetActive(true);
         rifleFlash.SetActive(true);
         smgFlash.SetActive(true);
