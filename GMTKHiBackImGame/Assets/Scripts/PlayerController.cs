@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
 
 
             //Weapon Swap 
-            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetAxis("Mouse ScrollWheel") > 0);
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetAxis("Mouse ScrollWheel") > 0)
         {
 
                 isBlunder = true;
