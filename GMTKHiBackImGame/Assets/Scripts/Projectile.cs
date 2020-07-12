@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour
             collider.gameObject.GetComponent<BasicEnemy>().Kill();
             Destroy(gameObject);
         }
-        else if (collider.tag == "Geometry")
+        else
         {
             Debug.Log("Projectile has hit another object, destroying projectile.");
             Destroy(gameObject);
