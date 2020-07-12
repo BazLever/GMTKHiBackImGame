@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7165262179119479377}
   m_Layer: 0
   m_Name: CatwalkRailing_Up
-  m_TagString: Untagged
+  m_TagString: Geo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

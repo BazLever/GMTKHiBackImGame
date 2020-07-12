@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 81913614298095798}
   m_Layer: 0
   m_Name: CatwalkScaffolding_2x1x2
-  m_TagString: Untagged
+  m_TagString: Geo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
