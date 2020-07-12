@@ -9,7 +9,11 @@ public class EnemyProjectile : MonoBehaviour
 
     private void Start()
     {
+
+
         player = GameObject.Find("Main Camera");
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -17,11 +21,17 @@ public class EnemyProjectile : MonoBehaviour
         if (collision.collider.name == "Player")
         {
             player.GetComponent<PlayerController>().Death();
+            Destroy(gameObject);
         }
         if (collision.collider.name == "RobotEnemy")
         {
             return;
         }
-        Destroy(gameObject);
+        if (collision.collider.tag == "Geo")
+        {
+            Destroy(gameObject);
+        }
+
+
     }
 }
