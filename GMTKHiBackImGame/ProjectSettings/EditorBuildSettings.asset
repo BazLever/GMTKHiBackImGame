@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainLevel_Hard_002.unity
     guid: f958145b90fc451449b40dd76b533f8d
   - enabled: 1
+    path: Assets/Scenes/MainLevel_Hard_003.unity
+    guid: 97456cfb5be5e8146af146e0ea9834d6
+  - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: f58415ff8e0f033448f6e146d042e5dd
   m_configObjects: {}
