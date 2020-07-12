@@ -82,6 +82,8 @@ public class PlayerController : MonoBehaviour
     public Animator rifleAnim;
     public Animator smgAnim;
 
+    int weaponSelected;
+
     void Start()
     {
         isDead = false;
@@ -99,33 +101,34 @@ public class PlayerController : MonoBehaviour
 
         isBlunder = true;
         isModern = false;
+        isSMG = false;
     }
 
 
     void Update()
     {
-        if (!isDead) { 
-        flashDelta += Time.deltaTime;
-        fireTime += Time.deltaTime;
+        if (!isDead) {
+            flashDelta += Time.deltaTime;
+            fireTime += Time.deltaTime;
 
-        blunderFireTime += Time.deltaTime;
-        rifleFireTime += Time.deltaTime;
-        smgFireTime += Time.deltaTime;
+            blunderFireTime += Time.deltaTime;
+            rifleFireTime += Time.deltaTime;
+            smgFireTime += Time.deltaTime;
 
-        /*
-                fireTime += Time.deltaTime;
-                if (fireTime >= fireRate)
-                {
-                    shoot();
-                    fireTime = 0;
-                }
-                */
-
-
+            /*
+                    fireTime += Time.deltaTime;
+                    if (fireTime >= fireRate)
+                    {
+                        shoot();
+                        fireTime = 0;
+                    }
+                    */
 
 
-        //Weapon Swap 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+
+
+            //Weapon Swap 
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetAxis("Mouse ScrollWheel") > 0);
         {
 
                 isBlunder = true;
@@ -141,7 +144,7 @@ public class PlayerController : MonoBehaviour
                 smgAnim.SetBool("IsShooting", false);
 
             }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetMouseButtonDown(2))
         {
                 
                 
@@ -157,7 +160,7 @@ public class PlayerController : MonoBehaviour
                 rifleAnim.SetBool("IsShooting", false);
                 smgAnim.SetBool("IsShooting", false);
             }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetAxis("Mouse ScrollWheel") < 0)
         {
                 
 
