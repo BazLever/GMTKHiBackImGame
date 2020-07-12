@@ -27,6 +27,9 @@ public class BasicEnemy : MonoBehaviour
 
     public void Kill()
     {
+        GameObject levelEnd;
+        levelEnd = GameObject.Find("LevelEnd");
+        levelEnd.GetComponent<LevelEnd>().robotsRemaining -= 1;
         Destroy(gameObject);
     }
 }

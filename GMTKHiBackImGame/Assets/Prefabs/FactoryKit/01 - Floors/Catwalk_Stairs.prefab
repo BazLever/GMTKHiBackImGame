@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5700561284210481074}
   - component: {fileID: 215963729171708053}
   m_Layer: 0
-  m_Name: CatwalkBase_Stairs_2x2x2
-  m_TagString: Untagged
+  m_Name: Catwalk_Stairs
+  m_TagString: Geo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

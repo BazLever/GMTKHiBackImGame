@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8268355270957014714}
   m_Layer: 0
   m_Name: MetalWall_CornerPlugR_1x1
-  m_TagString: Untagged
+  m_TagString: Geo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
