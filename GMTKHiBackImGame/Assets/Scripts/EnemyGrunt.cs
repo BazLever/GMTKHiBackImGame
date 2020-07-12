@@ -44,10 +44,7 @@ public class EnemyGrunt : MonoBehaviour
 
     }
 
-    public void Kill()
-    {
-        Destroy(gameObject);
-    }
+
 
     void ShootAtPlayer()
     {
