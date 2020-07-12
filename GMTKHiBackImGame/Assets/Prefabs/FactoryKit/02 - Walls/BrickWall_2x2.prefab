@@ -117,6 +117,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickWall_2x2
       objectReference: {fileID: 0}
+    - target: {fileID: 3504441054693946997, guid: d1a120b67b8086e40ad135d5803fd931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4eb6994a9555b3e48933f9df4db2e2de, type: 2}
+    - target: {fileID: 8373467885113419999, guid: d1a120b67b8086e40ad135d5803fd931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801e24ce7a8de7143b6c6fc745df669a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1a120b67b8086e40ad135d5803fd931, type: 3}
 --- !u!4 &6880546508159688819 stripped
