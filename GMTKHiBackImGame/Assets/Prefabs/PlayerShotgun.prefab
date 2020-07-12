@@ -553,9 +553,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7648629789141949303}
   - component: {fileID: 1622427778035284160}
+  - component: {fileID: 836240883}
   m_Layer: 8
   m_Name: PlayerShotgun
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -596,6 +597,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &836240883
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7648629789141949302}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 104f1943db6c91f439baebdb61d1118d, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 104f1943db6c91f439baebdb61d1118d, type: 2}
+  - {fileID: 7400000, guid: 98ea781d7a43e4a4b9101c4f8959b72e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7684037602355293298
 GameObject:
   m_ObjectHideFlags: 0
