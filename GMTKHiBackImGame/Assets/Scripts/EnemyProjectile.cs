@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider collider)
+
+    GameObject player;
+
+    private void Start()
     {
-        if (collider.tag == "Player")
+        player = GameObject.Find("Main Camera");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.name == "Player")
         {
-            collider.gameObject.GetComponent<PlayerController>().Death();
+            player.GetComponent<PlayerController>().Death();
         }
+        if (collision.collider.name == "RobotEnemy")
+        {
+            return;
+        }
+        Destroy(gameObject);
     }
 }

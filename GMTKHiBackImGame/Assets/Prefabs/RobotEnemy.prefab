@@ -90,6 +90,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de73fe4c643340c4c99b35c61357b07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5385175685035984685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4028837529168049078}
+  m_Layer: 0
+  m_Name: ProjectileSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4028837529168049078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385175685035984685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.377, z: 1.037}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7647148372296761609}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7406768032061338810
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7647148372296761609}
+  - component: {fileID: 9004970973761680924}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -114,13 +145,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7406768032061338810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.77, z: -0.108}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4991960329749767202}
+  - {fileID: 4028837529168049078}
   m_Father: {fileID: 8408702923152901603}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9004970973761680924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406768032061338810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070cc3bb61da4d34fadd3dd438867a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 2.5
+  projectile: {fileID: 579401405494666245, guid: f820513b6e069b44fae4717bc29f6245,
+    type: 3}
+  projectileSpeed: 10
+  projectileSpawn: {fileID: 4028837529168049078}
 --- !u!1001 &17369767573327672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -146,12 +195,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 12c19a3bcee9faa4f8965aee2a1eac3f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.7160001
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 12c19a3bcee9faa4f8965aee2a1eac3f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.105
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 12c19a3bcee9faa4f8965aee2a1eac3f,
         type: 3}

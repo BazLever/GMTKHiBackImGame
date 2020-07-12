@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8025967170581842247}
-  - component: {fileID: 6296156182355932752}
-  - component: {fileID: 1982053044244117752}
+  - component: {fileID: 257360540896277971}
+  - component: {fileID: 1951577845838967941}
   m_Layer: 0
   m_Name: ConveyorCurved_4x4
   m_TagString: Untagged
@@ -33,8 +33,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &6296156182355932752
-MeshCollider:
+--- !u!65 &257360540896277971
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -43,12 +43,11 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -5677926973230725074, guid: 546ab0824d955024b9f0a6d9cbe909a2, type: 3}
---- !u!64 &1982053044244117752
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 1.9761055, y: 0.9794507, z: 2.613142}
+  m_Center: {x: 0.9915173, y: 0.48291516, z: -0.714098}
+--- !u!65 &1951577845838967941
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -57,10 +56,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -3137846825085034403, guid: 546ab0824d955024b9f0a6d9cbe909a2, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.510394, y: 0.9589009, z: 2.0172043}
+  m_Center: {x: -0.75519705, y: 0.48291564, z: 0.98124266}
 --- !u!1001 &1225388262657893158
 PrefabInstance:
   m_ObjectHideFlags: 0

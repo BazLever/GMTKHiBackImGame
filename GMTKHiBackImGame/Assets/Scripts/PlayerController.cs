@@ -69,9 +69,19 @@ public class PlayerController : MonoBehaviour
     private GameObject smgShotTimer;
     private GameObject smgBackground;
 
+    bool isDead;
+
+
+    //Death related
+    public GameObject deathCam;
+
+
+    //Animation related
+    public Animator blunderbusAnimation, rifleAnimation, smgAnimation;
+
     void Start()
     {
-
+        isDead = false;
         shotTimer = GameObject.Find("TimeLeft");
         shotBackground = GameObject.Find("Background");
 
@@ -86,11 +96,16 @@ public class PlayerController : MonoBehaviour
 
         isBlunder = true;
         isModern = false;
+
+        blunderbusAnimation.Play("IdleBlunderbus");
+        rifleAnimation.Play("IdleRifle");
+        smgAnimation.Play("IdleSMG");
     }
 
 
     void Update()
     {
+        if (!isDead) { 
         flashDelta += Time.deltaTime;
         fireTime += Time.deltaTime;
 
@@ -162,7 +177,8 @@ public class PlayerController : MonoBehaviour
             }
             else if (blunderFireTime >= blunderFireRate)
             {
-                blunderFireTime = blunderFireRate;
+                    blunderbusAnimation.Play("IdleBlunderbus");
+                    blunderFireTime = blunderFireRate;
             }
         } else if (!isBlunder)
         {
@@ -186,7 +202,8 @@ public class PlayerController : MonoBehaviour
             }
             else if (rifleFireTime >= modernFireRate)
             {
-                rifleFireTime = modernFireRate;
+                    rifleAnimation.Play("IdleRifle");
+                    rifleFireTime = modernFireRate;
             }
         } else if (!isModern)
         {
@@ -210,7 +227,8 @@ public class PlayerController : MonoBehaviour
             }
             else if (smgFireTime >= smgFireRate)
             {
-                smgFireTime = smgFireRate;
+                    smgAnimation.Play("IdleSMG");
+                    smgFireTime = smgFireRate;
             }
         }
         else if (!isSMG)
@@ -247,6 +265,7 @@ public class PlayerController : MonoBehaviour
             smgFlash.SetActive(false);
             flashDelta = 0;
         }
+        }
 
     }
 
@@ -254,6 +273,10 @@ public class PlayerController : MonoBehaviour
 
      void shoot()
     {
+        blunderbusAnimation.Play("ShootingBlunderbus");
+        rifleAnimation.Play("ShootingRifle");
+        smgAnimation.Play("ShootingSMG");
+
         blunderFlash.SetActive(true);
         rifleFlash.SetActive(true);
         smgFlash.SetActive(true);
@@ -278,14 +301,16 @@ public class PlayerController : MonoBehaviour
 
         if (isBlunder)
         {
+            
             blunderbusSound.pitch = soundRange;
             blunderbusSound.Play();
         } else if (isModern)
         {
-            rifleSound.pitch = soundRange;
+                        rifleSound.pitch = soundRange;
             rifleSound.Play();
         } else if (isSMG)
         {
+            
             smgSound.pitch = soundRange;
             smgSound.Play();
         }
@@ -299,6 +324,15 @@ public class PlayerController : MonoBehaviour
 
         
 
+    }
+
+
+    public void Death()
+    {
+        isDead = true;
+        gameObject.transform.GetComponent<CameraMovement>().enabled = false;
+        Camera.main.transform.gameObject.GetComponent<Camera>().enabled = false;
+        GameObject GO = Instantiate(deathCam, weaponHardPoint.position, Quaternion.identity) as GameObject;
     }
 
 }
